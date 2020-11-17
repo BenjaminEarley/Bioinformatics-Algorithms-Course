@@ -1,0 +1,30 @@
+<html>
+ <head></head>
+ <body>
+  <p>Since identical <i>k</i>-mers clump together in the sorted array (like (0, 0, 0) for <samp>AA</samp> or (10, 10, 10) for <samp>GG</samp>), frequent <i>k</i>-mers are the longest runs of identical integers in <i>SortedIndex</i>.<br></p> 
+  <p><span class="image-wrapper"></span></p>
+  <p style="text-align: center;"><img alt="" class="image-fullsize" height="71px" src="http://bioinformaticsalgorithms.com/images/Replication/sortedindex_count.png" title="Image: http://bioinformaticsalgorithms.com/images/Replication/sortedindex_count.png" width="697px"></p>
+  <p></p> 
+  <p>This insight leads to the <b>FindingFrequentWordsBySorting</b>&nbsp;algorithm, shown below. This algorithm uses an array <i>Count</i> for which <i>Count</i>(<i>i</i>) computes the number of times that the integer at position <i>i</i> in the array <i>SortedIndex</i> appears in the first <i>i</i> elements of this array (shown at the bottom of the above figure). In the pseudocode for <b>FindingFrequentWordsBySorting</b>,&nbsp;we assume that you already know how to sort an array using a function <b>Sort</b>.<br></p> 
+  <p><b></b></p>
+  <div>
+   <pre><b></b><pre><code class="language-no-highlight">&nbsp; &nbsp; FindingFrequentWordsBySorting(Text , k)
+&nbsp; &nbsp; &nbsp; &nbsp; FrequentPatterns ← an empty set
+&nbsp; &nbsp; &nbsp; &nbsp; for i ← 0 to |Text| −&nbsp;k
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Pattern ← Text(i, k)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Index(i) ← PatternToNumber(Pattern)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Count(i) ← 1
+&nbsp; &nbsp; &nbsp; &nbsp; SortedIndex&nbsp;← Sort(Index)
+&nbsp; &nbsp; &nbsp; &nbsp; for i ← 1 to |Text| −&nbsp;k
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if SortedIndex(i) = SortedIndex(i − 1)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Count(i) = Count(i − 1) + 1
+&nbsp; &nbsp; &nbsp; &nbsp; maxCount ← maximum value in the array Count
+&nbsp; &nbsp; &nbsp; &nbsp; for&nbsp;i ← 0 to |Text| −&nbsp;k
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if Count(i) = maxCount
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Pattern ← NumberToPattern(SortedIndex(i), k)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; add Pattern to the set FrequentPatterns
+&nbsp; &nbsp; &nbsp; &nbsp; return FrequentPatterns</code></pre><i></i></pre>
+  </div>
+  <i></i>&nbsp;
+ </body>
+</html>

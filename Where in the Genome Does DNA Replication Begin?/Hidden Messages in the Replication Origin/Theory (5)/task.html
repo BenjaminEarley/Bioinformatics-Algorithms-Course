@@ -1,0 +1,13 @@
+<html>
+ <head></head>
+ <body>
+  <p>To compute <i>Count</i>(<i>Text</i>, <i>Pattern</i>), our plan is to “slide a window” down <i>Text</i>, checking whether each <i>k</i>-mer substring of <i>Text</i> matches <i>Pattern</i>. We will therefore refer to the <i>k</i>-mer starting at position <i>i</i> of <i>Text</i> as <i>Text</i>(<i>i</i>, <i>k</i>). Throughout this book, we will often use <b>0-based indexing</b>, meaning that we count starting at 0 instead of 1. In this case, <i>Text</i> begins at position 0 and ends at position |<i>Text</i>| − 1 (|<i>Text</i>| denotes the number of symbols in <i>Text</i>). For example, if <i>Text</i> = <samp>GACCATACTG</samp>, then <i>Text</i>(4, 3) = <samp>ATA</samp>. Note that the last <i>k</i>-mer of <i>Text</i> begins at position |<i>Text</i>| − <i>k</i>, e.g., the last 3-mer of <samp>GACCATACTG</samp> starts at position 10 − 3 = 7. This discussion results in the following pseudocode for computing <i>Count</i>(<i>Text</i>, <i>Pattern</i>). </p> 
+  <p><b>Important Note:</b> We do not assume that you know how to program; we only expect you to program if you are following the Honors Track. However, we do need to communicate the computational methods used in modern biology. To do so, we will use the language of <b>pseudocode</b>, which is more precise than human language. Please click <a href="http://bioinformaticsalgorithms.com/excerpt/Pseudocode.pdf" rel="nofollow noopener noreferrer">here</a> for an overview of pseudocode.</p> 
+  <pre><code class="language-no-highlight">PatternCount(Text, Pattern)
+        count ← 0
+        for i ← 0 to |Text| − |Pattern|
+            if Text(i, |Pattern|) = Pattern
+                count ← count + 1
+        return count</code></pre>
+ </body>
+</html>

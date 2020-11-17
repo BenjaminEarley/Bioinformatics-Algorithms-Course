@@ -1,0 +1,18 @@
+<html>
+ <head></head>
+ <body>
+  <p>We now have a recursive algorithm to move <em>n</em> disks from the left peg to the right peg. We will use three variables (each taking a different value from 1, 2, and 3) to denote the three pegs: <em>startPeg</em>, <em>destinationPeg</em>, and <em>transitPeg</em>. These three variables always represent different pegs, and so <em>startPeg</em> + <em>destinationPeg</em> + <em>transitPeg</em> is always equal to 1 + 2 + 3 = 6. <b>HanoiTowers</b>(<em>n</em>, <em>startPeg</em>, <em>destinationPeg</em>) moves <em>n</em> disks from <em>startPeg</em> to <em>destinationPeg</em> (using <em>transitPeg</em> as a temporary destination).</p> 
+  <div>
+   <pre><pre><code class="language-no-highlight">HanoiTowers(n, startPeg, destinationPeg)
+&nbsp;&nbsp;&nbsp;&nbsp;if n = 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Move top disk from startPeg to destinationPeg
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return
+&nbsp;&nbsp;&nbsp;&nbsp;transitPeg = 6 − startPeg − destinationPeg
+&nbsp;&nbsp;&nbsp;&nbsp;HanoiTowers(n − 1, startPeg, transitPeg)
+&nbsp;&nbsp;&nbsp;&nbsp;Move top disk from startPeg to destinationPeg
+&nbsp;&nbsp;&nbsp;&nbsp;HanoiTowers(n − 1, transitPeg, destinationPeg)
+&nbsp;&nbsp;&nbsp;&nbsp;return</code></pre></pre>
+  </div> 
+  <p>Even though this algorithm may seem straightforward, moving a 100-disk tower would require more steps than the number of atoms in the universe! The fast growth of the number of moves required by <strong>HanoiTowers</strong> is explained by the fact that every time <strong>HanoiTowers</strong>&nbsp;is called for <em>n</em> disks, it calls itself twice for <em>n</em> − 1, which in turn triggers four calls for <em>n</em> − 2, and so on. For example, a call to <strong>HanoiTowers</strong>(4, 1, 3) results in calls <strong>HanoiTowers</strong>(3, 1, 2) and <strong>HanoiTowers</strong>(3, 2, 3); these calls, in turn, call <strong>HanoiTowers</strong>(2, 1, 3), <strong>HanoiTowers</strong>(2, 3, 2), <strong>HanoiTowers</strong>(2, 2, 1), and <strong>HanoiTowers</strong>(2, 1, 3).</p> 
+ </body>
+</html>

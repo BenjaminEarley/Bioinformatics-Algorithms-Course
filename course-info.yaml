@@ -1,0 +1,14 @@
+type: stepik
+title: Bioinformatics Algorithms
+language: English
+summary: |-
+  Explore the power of computing in modern biology and apply existing software tools to find recurring biological motifs within genes that are responsible for helping Mycobacterium tuberculosis go "dormant" within a host for many years before causing an active infection.
+
+
+
+  Interactive preview of Bioinformatics Algorithms: An Active Learning Approach.<br>
+  © 2014 by Phillip Compeau and Pavel Pevzner. All rights reserved.
+programming_language: Python
+content:
+- Where in the Genome Does DNA Replication Begin?
+mode: Study

@@ -1,0 +1,9 @@
+<html>
+ <head></head>
+ <body>
+  <p>Let’s see how many steps are required to solve the Towers of Hanoi Problem for four disks. The first important observation is that sooner or later you will have to move the largest disk to the right peg. However, in order to move the largest disk, we first have to move all three smallest disks off the first peg. Furthermore, these three smallest disks must all be on the same peg because the largest disk cannot be placed on top of another disk. Thus, we first have to move the top three disks to the middle peg (seven moves), then move the largest disk to the right peg (one move), then again move the three smallest disks from the middle peg to the top of the largest disk on the right peg (another seven moves), for a total of fifteen moves.</p> 
+  <p>More generally, let <em>T</em>(<em>n</em>) denote the minimum number of steps required to solve the Towers of Hanoi puzzle with <em>n</em> disks. To move n disks from the left peg to the right peg, you first need to move the <em>n</em> − 1 smallest disks from the left peg to the middle peg (T(<em>n</em> − 1) steps), then move the largest disk to the right peg (1 step), and finally move the <em>n</em> − 1 smallest disks from the middle peg to the right peg (<em>T</em>(<em>n</em> − 1) steps). This yields the recurrence relation</p>
+  <p style="text-align: center;"><em>T</em><span>(</span><em>n</em><span>) = 2</span><em>T</em><span>(</span><em>n</em><span> - 1) + 1.</span></p>
+  <p><strong><span style="color: #ff4363;">STOP and Think:</span></strong> Using the above recurrence relation, can you find a formula for <em>T</em>(<em>n</em>) that does not require recursion?</p> 
+ </body>
+</html>

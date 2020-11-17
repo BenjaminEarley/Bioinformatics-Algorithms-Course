@@ -1,0 +1,33 @@
+<html>
+ <head></head>
+ <body>
+  <p>The observation on the previous step helps us modify <b>ClumpFinding</b> as shown below. Note that we now only call <b>ComputingFrequencies</b> once, updating the frequency array as we go along.</p> 
+  <p><b></b></p>
+  <div>
+   <pre><b></b><pre><code class="language-no-highlight">&nbsp; &nbsp; BetterClumpFinding(Genome, k, t, L)
+&nbsp; &nbsp; &nbsp; &nbsp; FrequentPatterns ← an empty set
+&nbsp; &nbsp; &nbsp; &nbsp; for i ← 0 to 4k −&nbsp;1
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Clump(i) ← 0
+&nbsp; &nbsp; &nbsp; &nbsp; Text ← Genome(0, L)
+&nbsp; &nbsp; &nbsp; &nbsp; FrequencyArray ← ComputingFrequencies(Text, k)
+&nbsp; &nbsp; &nbsp; &nbsp; for i ← 0&nbsp;to 4k − 1
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if FrequencyArray(i) ≥ t
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Clump(i) ← 1
+&nbsp; &nbsp; &nbsp; &nbsp; for i ← 1 to |Genome| − L
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FirstPattern ← Genome(i − 1, k)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; index ← PatternToNumber(FirstPattern)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FrequencyArray(index) ← FrequencyArray(index) − 1
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; LastPattern ← Genome(i +&nbsp;L − k, k)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; index ←&nbsp;PatternToNumber(LastPattern)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FrequencyArray(index) ← FrequencyArray(index) + 1
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if FrequencyArray(index) ≥ t
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Clump(index) ← 1
+&nbsp; &nbsp; &nbsp; &nbsp; for i ← 0&nbsp;to 4k − 1
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if Clump(i) = 1
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Pattern ← NumberToPattern(i, k)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; add Pattern to the set FrequentPatterns
+&nbsp; &nbsp; &nbsp; &nbsp; return FrequentPatterns</code></pre><i></i></pre>
+  </div>
+  <i></i>
+ </body>
+</html>

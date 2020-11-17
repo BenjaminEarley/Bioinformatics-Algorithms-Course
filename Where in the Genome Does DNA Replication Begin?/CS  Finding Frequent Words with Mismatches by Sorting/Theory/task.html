@@ -1,0 +1,30 @@
+<html>
+ <head></head>
+ <body>
+  <p><b>Note: </b>This Charging Station uses some notation from<b> </b><a rel="nofollow noopener noreferrer"><b>Charging Station:</b> Finding Frequent Words by Sorting</a>.</p> 
+  <p>The following pseudocode reduces the Frequent Words with Mismatches Problem to sorting.&nbsp;The following pseudocode reduces the Frequent Words with Mismatches Problem to sorting. It first generates all neighbors (with up to <i>d</i> mismatches) for all <i>k</i>-mers in <i>Text</i> and combines them all into an array <i>NeighborhoodArray</i>. Note that a <i>k</i>-mer <i>Pattern</i> appears <i>Count</i><sub><i>d</i></sub>(<i>Text</i>, <i>Pattern</i>) times in this array. The only thing left is to sort this array, count how many times each <i>k</i>-mer appears in the sorted array, and then return the <i>k</i>-mers that occur the maximum number of times.<br></p> 
+  <p><b></b></p>
+  <div>
+   <pre><b></b><pre><code class="language-no-highlight">&nbsp; &nbsp; FrequentWordsWithMismatches(Text, k, d)
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;FrequentPatterns ← an empty set
+&nbsp; &nbsp; &nbsp; &nbsp; Neighborhoods&nbsp;← an empty list
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;for i&nbsp;← 0 to |Text| −&nbsp;k
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;add Neighbors(Text(i, k), d) to&nbsp;Neighborhoods
+&nbsp; &nbsp; &nbsp; &nbsp; form an array NeighborhoodArray&nbsp;holding all strings in Neighborhoods
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;for i ← 0 to |Neighborhoods|&nbsp;− 1
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Pattern&nbsp;← NeighborhoodArray(i)&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Index(i) ← PatternToNumber(Pattern)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Count(i) ← 1
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;SortedIndex ← Sort(Index)
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;for&nbsp;i ← 0 to |Neighborhoods| −&nbsp;2 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;if SortedIndex(i) = SortedIndex(i + 1)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Count(i + 1)&nbsp;←&nbsp;Count(i) + 1
+&nbsp; &nbsp; &nbsp; &nbsp;maxCount&nbsp;← maximum value in array&nbsp;Count
+&nbsp; &nbsp; &nbsp; &nbsp;for&nbsp;i&nbsp;← 0 to |Neighborhoods|&nbsp;− 1
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if&nbsp;Count(i) =&nbsp;maxCount
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Pattern&nbsp;←&nbsp;NumberToPattern(SortedIndex(i),&nbsp;k)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;add&nbsp;Pattern to FrequentPatterns
+&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return FrequentPatterns&nbsp;</code></pre>&nbsp;</pre>
+  </div>
+ </body>
+</html>

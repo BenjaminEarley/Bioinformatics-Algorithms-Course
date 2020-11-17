@@ -1,0 +1,45 @@
+<html>
+ <head></head>
+ <body>
+  <pre>
+   <center>                  
+    <em>Corr</em>(AB)
+B = 110110         
+    <strong><span style="color:royalblue">0</span></strong>
+B =  
+    <strong><span style="color:forestgreen">11011</span></strong>0        
+    <strong><span style="color:royalblue">1</span></strong>
+B =   110110       
+    <strong><span style="color:royalblue">0</span></strong>
+B =    110110      
+    <strong><span style="color:royalblue">0</span></strong>
+B =     
+    <strong><span style="color:forestgreen">11</span></strong>0110     
+    <strong><span style="color:royalblue">1</span></strong>
+B =      
+    <strong><span style="color:forestgreen">1</span></strong>10110    
+    <strong><span style="color:royalblue">1</span></strong>
+A = 
+    <strong><span style="color:forestgreen">011011</span></strong>         &nbsp;
+
+
+   </center></pre> 
+  <p>Given two <em>k</em>-mers <em>A</em> and <em>B</em>, the <strong>correlation</strong> of <em>A</em> and <em>B</em>, denoted <em>Corr</em>(<em>AB</em>) = (<em>c</em><sub>0</sub>,…,<em>c</em><sub><em>k−1</em></sub>) is a <em>k</em>-letter binary word such that <em>c</em><sub><em>i</em></sub> = 1 if <em>B</em> (<em>k</em> − <em>i</em>)-overlaps with <em>A</em>, and 0 otherwise. The correlation of the above strings is <strong><span style="color:royalblue">010011</span></strong>. The <strong>correlation frequency</strong> of <em>A</em> and <em>B</em> is defined as</p> 
+  <center>
+   <span class="math-tex">\( K_{A,B} = c_0 + c_1 \cdot \dfrac{1}{2} + c_2 \cdot \left(\dfrac{1}{2}\right)^2 + \cdots + c_{k-1} \cdot \left(\dfrac{1}{2}\right)^{k-1} \)</span>
+  </center> 
+  <p><br>For the strings <em>A</em> and <em>B</em> in the above figure, their correlation is <samp>"010011"</samp> and their correlation frequency is</p> 
+  <center>
+   <span class="math-tex">\( K_{A,B} = (1/2) + (1/2)^4 + (1/2)^5 = 19/32 \)</span>.
+  </center> 
+  <p><br>Mathematician John Conway suggested the following deceivingly simple formula to compute the odds that <em>B</em> will defeat <em>A</em>:</p> 
+  <p style="text-align: center;"><span style="text-align: center;"><span class="math-tex">\( \left.\left(K_{A,A} - K_{A,B}\right)\middle/\left(K_{B,B} - K_{B,A}\right)\right. \)</span>. </span></p> 
+  <p>Conway's proof of this formula was never published, and Martin Gardner, a leading popular mathematics writer, said the following about the formula:</p> 
+  <blockquote>
+   I have no idea why it works. It just cranks out the answer as if by magic, like so many of Conway's other algorithms.
+  </blockquote> 
+  <p style="text-align: center;"><span style="text-align: center;"></span></p>
+  <p><a class="_stepic_link button" data-lesson="11" data-type="lesson" href="/2/11/4" rel="nofollow noopener noreferrer">Return to Main Text</a></p> 
+  <p></p>
+ </body>
+</html>

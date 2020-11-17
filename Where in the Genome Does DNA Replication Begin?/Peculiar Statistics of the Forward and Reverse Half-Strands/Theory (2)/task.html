@@ -1,0 +1,11 @@
+<html>
+ <head></head>
+ <body>
+  <h2 style="text-align: center;">The skew diagram</h2> 
+  <p>Let's see if we can take advantage of these peculiar statistics caused by deamination to locate <em>ori</em>. As the table on the previous step illustrates, the difference between the total amount of guanine and the total amount of cytosine is negative on the reverse half-strand (201634 - 219518 = -17884) and positive on the forward half-strand (211607 - 207901 = 3706). Thus, our idea is to traverse the genome, keeping a running total of the difference between the counts of <samp>G</samp> and <samp>C</samp>. If this difference starts <em>increasing</em>, then we guess that we are on the forward half-strand; on the other hand, if this difference starts <em>decreasing</em>, then the we guess that we are on the reverse half-strand. See the figure below.</p> 
+  <p></p>
+  <p style="text-align: center;"><img alt="" class="image-fullsize" height="362" src="http://bioinformaticsalgorithms.com/images/Replication/increasing_decreasing_skew.png" width="621"></p>
+  <p></p> 
+  <p><strong><span style="color: #ff4363;">STOP and Think:</span></strong> Imagine that you are reading through the genome (in the 5’ → 3' direction) and notice that the difference between the guanine and cytosine counts just switched its behavior from decreasing to increasing. Where in the genome are you?</p>
+ </body>
+</html>

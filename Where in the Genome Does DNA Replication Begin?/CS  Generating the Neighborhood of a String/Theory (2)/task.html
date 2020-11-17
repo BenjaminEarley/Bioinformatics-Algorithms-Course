@@ -1,0 +1,24 @@
+<html>
+ <head></head>
+ <body>
+  <p><span>In the following pseudocode, we use the notation </span><i>symbol</i><span> • </span><i>Text</i><span> to denote the concatenation of a character </span><i>symbol</i><span> and a string </span><i>Text</i><span>, e.g., </span><samp>A•GCATG</samp><span> = </span><samp>AGCATG</samp><span>.</span><br></p> 
+  <p><b></b></p>
+  <div>
+   <pre><b></b><pre><code class="language-no-highlight">&nbsp; &nbsp; Neighbors(Pattern, d)
+&nbsp; &nbsp; &nbsp; &nbsp; if d = 0
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return {Pattern}
+&nbsp; &nbsp; &nbsp; &nbsp; if |Pattern| = 1 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return {A, C, G, T}
+&nbsp; &nbsp; &nbsp; &nbsp; Neighborhood ← an empty set
+&nbsp; &nbsp; &nbsp; &nbsp; SuffixNeighbors ← Neighbors(Suffix(Pattern), d)
+&nbsp; &nbsp; &nbsp; &nbsp; for each string Text from SuffixNeighbors
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if HammingDistance(Suffix(Pattern), Text) &lt; d
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for each nucleotide x
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; add x • Text to Neighborhood
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; add FirstSymbol(Pattern) • Text to Neighborhood
+&nbsp; &nbsp; &nbsp; &nbsp; return Neighborhood</code></pre><i></i></pre>
+  </div>
+  <i></i>
+ </body>
+</html>

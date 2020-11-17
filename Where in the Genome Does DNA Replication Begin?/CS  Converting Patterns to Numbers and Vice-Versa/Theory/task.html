@@ -1,0 +1,13 @@
+<html>
+ <head></head>
+ <body>
+  <p>Our approach to computing <i>PatternToNumber</i>(<i>Pattern</i>) is based on a simple observation. If we remove the final symbol from all lexicographically ordered <i>k</i>-mers, the resulting list is still ordered lexicographically (think about removing the final letter from every word in a dictionary). In the case of DNA strings, every (<i>k</i> − 1)-mer in the resulting list is repeated four times (see figure below).<br></p> 
+  <p><span class="image-wrapper"></span></p>
+  <p style="text-align: center;"><img alt="" class="image-fullsize" height="175px" src="http://bioinformaticsalgorithms.com/images/Replication/lexicographic_order.png" title="Image: http://bioinformaticsalgorithms.com/images/Replication/lexicographic_order.png" width="495px"></p>
+  <p></p> 
+  <p><b>Figure:</b> <b></b>If we remove the final symbol from all lexicographically ordered DNA 3-mers, we obtain a lexicographic order of (red) 2-mers, where each 2-mer is repeated four times.</p> 
+  <p>Thus, the number of 3-mers occurring before <samp>AGT</samp> is equal to four times the number of 2-mers occurring before <samp>AG</samp> plus the number of 1-mers occurring before <samp>T</samp>. Therefore,</p> 
+  <p style="text-align: center;"><i>PatternToNumber</i>(<samp><b><span style="color: #ff4363;">AG</span></b>T</samp>) = 4 · <i>PatternToNumber</i>(<samp><span style="color: #ff4363;"><b>AG</b></span></samp>) + <i>SymbolToNumber</i>(<samp>T</samp>) = 8 + 3 = 11</p> 
+  <p>where <i>SymbolToNumber</i>(<i>symbol</i>) is the function transforming symbols <samp>A</samp>, <samp>C</samp>, <samp>G</samp>, and <samp>T</samp> into the respective integers 0, 1, 2, and 3.</p> 
+ </body>
+</html>

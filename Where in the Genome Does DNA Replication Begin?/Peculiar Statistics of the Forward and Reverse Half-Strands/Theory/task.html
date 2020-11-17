@@ -1,0 +1,13 @@
+<html>
+ <head></head>
+ <body>
+  <h2 style="text-align: center;">Deamination</h2> 
+  <p>In the last section, we saw that as the replication fork expands, DNA polymerase synthesizes DNA quickly on the reverse half-strand but suffers delays on the forward half-strand. We will explore the asymmetry of DNA replication to design a new algorithm for finding <em>ori</em>.</p> 
+  <p>How in the world can the asymmetry of replication possibly help us locate <em>ori</em>? Notice that since the replication of a reverse half-strand proceeds quickly, it lives double-stranded for most of its life. Conversely, a forward half-strand spends a much larger amount of its life single-stranded, waiting to be used as a template for replication. This discrepancy between the forward and reverse half-strands is important because single-stranded DNA has a much higher mutation rate than double-stranded DNA. In particular, if one of the four nucleotides in single-stranded DNA has a greater tendency than other nucleotides to mutate in single-stranded DNA, then we should observe a shortage of this nucleotide on the forward half-strand.</p> 
+  <p>Following up on this thought, let’s compare the nucleotide counts of the reverse and forward half-strands. If these counts differ substantially, then we will design an algorithm that attempts to track down these differences in genomes for which <em>ori</em> is unknown. The nucleotide counts for the forward and reverse half-strands of the <em>Thermotoga petrophila</em> genome are shown in the table below.</p> 
+  <p></p>
+  <p style="text-align: center;"><img alt="" class="image-fullsize" height="119" src="http://bioinformaticsalgorithms.com/images/Replication/forward_reverse_nucleotide_counts.png" width="630"></p>
+  <p></p> 
+  <p><br><strong><span style="color: #ff4363;">STOP and Think:</span></strong> Do you notice anything about the nucleotide counts in this table?</p>
+ </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+ <head></head>
+ <body>
+  <p>A straightforward algorithm for finding the most frequent <i>k</i>-mers in a string <i>Text</i> checks all <i>k</i>-mers appearing in this string (there are |<i>Text</i>| − <i>k</i> + 1 such <i>k</i>-mers) and then computes how many times each <i>k</i>-mer appears in <i>Text</i>. To implement this algorithm, called <b>FrequentWords</b>, we will need to generate an array <i>Count</i>, where <i>Count</i>(<i>i</i>) stores <i>Count</i>(<i>Text</i>, <i>Pattern</i>) for <i>Pattern</i> = <i>Text</i>(<i>i</i>, <i>k</i>) (see figure below).</p> 
+  <p><span class="image-wrapper"></span></p>
+  <p style="text-align: center;"><img alt="" class="image-fullsize" height="44px" src="https://ucarecdn.com/8367f24c-c989-4ad1-b5a4-9ab2dafa3a10/" title="Image: https://ucarecdn.com/8367f24c-c989-4ad1-b5a4-9ab2dafa3a10/" width="560px"></p>
+  <p></p> 
+  <p><b>Figure:&nbsp;</b>The array <i>Count</i>&nbsp;for <i>Text</i> = <samp>ACTGACTCCCACCCC</samp> and <i>k</i> = 3. For example, <i>Count</i>(0) = <i>Count</i>(4) = 2 because <samp> ACT</samp> (shown in boldface) appears twice in <i>Text</i>.</p> 
+  <p>The pseudocode for <b>FrequentWords</b> is shown below.<br></p> 
+  <div>
+   <pre><p><b></b></p><pre><code class="language-no-highlight">    FrequentWords(Text,&nbsp;k)
+        FrequentPatterns&nbsp;←&nbsp;an empty set
+        for&nbsp;i&nbsp;←&nbsp;0&nbsp;to&nbsp;|Text| −&nbsp;k
+            Pattern&nbsp;←&nbsp;the&nbsp;k-mer&nbsp;Text(i, k)
+            Count(i)&nbsp;←&nbsp;PatternCount(Text,&nbsp;Pattern)
+        maxCount&nbsp;←&nbsp;maximum value in array Count
+        for&nbsp;i&nbsp;←&nbsp;0&nbsp;to&nbsp;|Text| −&nbsp;k
+            if&nbsp;Count(i) =&nbsp;maxCount
+                add&nbsp;Text(i, k)&nbsp;to&nbsp;FrequentPatterns
+        remove duplicates from&nbsp;FrequentPatterns
+        return&nbsp;FrequentPatterns</code></pre><i></i></pre>
+  </div>
+  <p><i></i></p>
+ </body>
+</html>

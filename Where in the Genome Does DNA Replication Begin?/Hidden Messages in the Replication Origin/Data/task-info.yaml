@@ -1,0 +1,13 @@
+type: theory
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  This is a data task. You can use this editor as a playground
+
+  learner_created: false
+status: Solved
+feedback:
+  time: Tue, 17 Nov 2020 21:09:53 UTC
+record: -1
+post_submission_on_open: false

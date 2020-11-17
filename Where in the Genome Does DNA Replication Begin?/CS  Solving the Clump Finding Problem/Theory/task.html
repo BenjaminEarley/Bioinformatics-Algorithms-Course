@@ -1,0 +1,27 @@
+<html>
+ <head></head>
+ <body>
+  <p><b>Note: </b>This Charging Station assumes that you have read<b> </b><a href="/lesson/CS-The-Frequency-Array-2994/" rel="nofollow noopener noreferrer"><b>Charging Station:</b> The Frequency Array</a>.</p> 
+  <p>The pseudocode below slides a window of length <i>L</i> down <i>Genome</i>. After computing the frequency array for the current window, it identifies (<i>L</i>, <i>t</i>)-clumps simply by finding which <i>k</i>-mers occur at least <i>t</i> times within the window. To keep track of these clumps, our algorithm uses an array <i>Clump</i> of length 4<sup><i>k</i></sup> whose values are all initialized to zero. For each value of <i>i</i> between 0 and 4<sup><i>k</i></sup> − 1, we will set <i>Clump</i>(i) equal to 1 if <i>NumberToPattern</i>(<i>i</i>, <i>k</i>) forms an (<i>L</i>, <i>t</i>)-clump in <i>Genome</i>.</p> 
+  <p><b></b></p>
+  <div>
+   <pre><b></b><pre><code class="language-no-highlight">&nbsp; &nbsp; ClumpFinding(Genome, k, L, t)
+&nbsp; &nbsp; &nbsp; &nbsp; FrequentPatterns ← an empty set
+&nbsp; &nbsp; &nbsp; &nbsp; for i ← 0 to 4k − 1
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Clump(i) ← 0
+&nbsp; &nbsp; &nbsp; &nbsp; for i ← 0 to |Genome| − L
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Text ← the string of length L starting at position i in Genome 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FrequencyArray ← ComputingFrequencies(Text, k)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for index ← 0 to 4k − 1
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if FrequencyArray(index) ≥ t
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Clump(index) ← 1
+&nbsp; &nbsp; &nbsp; &nbsp; for i ← 0 to 4k − 1
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if Clump(i) = 1
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Pattern ← NumberToPattern(i, k)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; add Pattern to the set FrequentPatterns
+&nbsp; &nbsp; &nbsp; &nbsp; return FrequentPatterns</code></pre><i></i></pre>
+  </div>
+  <i></i> 
+  <p><b><span style="color: #ff4363;">STOP and Think:</span> </b>Estimate the running time of <b>ClumpFinding</b>. </p> 
+ </body>
+</html>

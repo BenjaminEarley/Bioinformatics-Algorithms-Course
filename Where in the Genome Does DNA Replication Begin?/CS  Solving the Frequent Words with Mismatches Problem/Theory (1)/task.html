@@ -1,0 +1,11 @@
+<html>
+ <head></head>
+ <body>
+  <p>We will also use an array <i>Close</i> of size 4<sup><i>k</i></sup> whose values we initialize to zero. In the following pseudocode, we set <i>Close</i>(<i>i</i>) = 1 whenever <i>Pattern</i> = <i>NumberToPattern</i>(<i>i</i>, <i>k</i>) is close to some <i>k</i>-mer in <i>Text</i>. This allows us to apply <b>ApproximatePatternCount</b><b> </b>only to close <i>k</i>-mers, a smarter approach than applying it to all <i>k</i>-mers. This pseudocode also calls the function <b>Neighbors</b>(<i>Pattern</i>, <i>d</i>) in order to generate the <i>d</i>-neighborhood of a <i>k</i>-mer <i>Pattern</i>. See<b> </b><a href="https://stepik.org/lesson/3014?unit=5812" rel="nofollow noopener noreferrer" title="Link: null"><b>Charging Station:</b> Generating the Neighborhood of a String </a>to learn how to implement this function.</p>
+  <p>Given integers <i>k</i> and <i>d</i>, we generalize the concept of the frequency array to account for approximate matches of <i>k</i>-mers with up to <i>d</i> mismatches. The <b>frequency array with up to </b><i><b>d</b></i><b> mismatches</b> of a string <i>Text</i> is an array of length 4<sup><i>k</i></sup>, where the <i>i</i>-th element of the array holds the number of times that the <i>i</i>-th <i>k</i>-mer (in lexicographic order) appears in <i>Text</i> with up to <i>d</i> mismatches (see figure below). For example, although <samp>CT</samp> does not occur in <samp>AAGCAAAGGTGGG</samp>, it appears twice (as <samp>C<span style="color: #ff4363;">A</span></samp> and <samp>G<span style="color: #ff4363;">T</span></samp>) if we allow for one mismatch.<br></p> 
+  <p><span class="image-wrapper"></span></p>
+  <p style="text-align: center;"><img alt="" class="image-fullsize" height="75" src="http://bioinformaticsalgorithms.com/images/Replication/freq_array_mismatches.png" width="702"></p>
+  <p></p>
+  <p><b>Figure:</b> The lexicographic order of DNA 2-mers (top), along with the index of each 2-mer in this order (middle), and the frequency array with 1 mismatch for the 14 nucleotide-long "genome" <samp>AAGCAAAGGTGGG</samp> (bottom).</p>
+ </body>
+</html>

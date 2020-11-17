@@ -1,0 +1,12 @@
+<html>
+ <head></head>
+ <body>
+  <p>To make <b>FrequentWords</b> faster, we will think about why this algorithm is slow in the first place. It slides a window of length <i>k</i> down <i>Text</i>, identifying a <i>k</i> mer <i>Pattern</i> of <i>Text</i> at each step. For each such <i>k</i>-mer, it must slide a window down the entire length of <i>Text</i> in order to compute <i>PatternCount</i>(<i>Text</i>, <i>Pattern</i>). Instead of doing all this sliding, we aspire to slide a window down <i>Text</i> only once. As we slide this window, we will keep track of the number of times that each <i>k</i>-mer <i>Pattern</i> has already appeared in <i>Text</i>, updating these numbers as we proceed.</p> 
+  <p>To achieve this goal, we will first order all 4<sup><i>k</i></sup> <i>k</i>-mers lexicographically (i.e., according to how they would appear in the dictionary) and then convert them into the 4<sup><i>k</i></sup> different integers between 0 and 4<sup><i>k</i></sup> − 1. Given an integer <i>k</i>, we define the<b> frequency array</b> of a string <i>Text</i> as an array of length 4<sup><i>k</i></sup>, where the <i>i</i>-th element of the array holds the number of times that the <i>i</i>-th <i>k</i>-mer (in the lexicographic order) appears in <i>Text</i> (see figure below).<br></p> 
+  <p>To compute the frequency array, we need to determine how to transform a <i>k</i>-mer <i>Pattern</i> into an integer using a function <i>PatternToNumber</i>(<i>Pattern</i>). We also should know how to reverse this process, transforming an integer between 0 and 4<sup><i>k</i></sup> − 1 into a <i>k</i>-mer using a function <i>NumberToPattern</i>(<i>index</i>, <i>k</i>). In the figure below, we can see that <i>PatternToNumber</i>(<samp>GT</samp>) = 11 and <i>NumberToPattern</i>(11, 2) = <samp>GT</samp>.<br></p> 
+  <p><span class="image-wrapper"></span></p>
+  <p style="text-align: center;"><img alt="" class="image-fullsize" height="73" src="http://bioinformaticsalgorithms.com/images/Replication/frequency_array.png" width="702"></p>
+  <p></p> 
+  <p><b>Figure:</b> Lexicographic order of DNA 2-mers (top), along with the index of each <i>k</i>-mer in this order (middle), and the frequency array for <samp>AAGCAAAGGTGGG</samp> (bottom). For example, the frequency array at index 10 is equal to 3 because <samp>GG</samp>, the tenth DNA 2-mer according to lexicographic order, occurs three times in <samp>AAGCAAAGGTGGG</samp>.</p>
+ </body>
+</html>

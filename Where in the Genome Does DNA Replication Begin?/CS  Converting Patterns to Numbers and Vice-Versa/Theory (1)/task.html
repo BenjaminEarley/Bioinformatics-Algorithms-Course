@@ -1,0 +1,13 @@
+<html>
+ <head></head>
+ <body>
+  <p>In order to compute the inverse function <i>NumberToPattern</i>(<i>index</i>, <i>k</i>), we return to the equation</p>
+  <p style="text-align: center;"><i>PatternToNumber</i>(<i>Pattern</i>) = 4 · <i>PatternToNumber</i>(<i>Prefix</i>(<i>Pattern</i>)) + <i>SymbolToNumber</i>(<i>LastSymbol</i>(<i>Pattern</i>))</p>
+  <p style="text-align: left;">This equation implies that when we divide <i>index</i> = <i>PatternToNumber</i>(<i>Pattern</i>) by 4, the remainder will be equal to <i>SymbolToNumber</i>(<i>symbol</i>), and the quotient will be equal to <i>PatternToNumber</i>(<i>Prefix</i>(<i>Pattern</i>)). Thus, we can use this fact to peel away symbols at the end of <i>Pattern</i> one at a time, as shown in the figure below.</p>
+  <p style="text-align: left;"><b><span style="color: #ff4363;">STOP and Think:</span></b> Once we have computed <i>NumberToPattern</i>(9904, 7) in this figure, how would you compute <i>NumberToPattern</i>(9904, 8)?<br><br></p> 
+  <p style="text-align: left;"></p>
+  <p style="text-align: center;"><img alt="" class="image-fullsize" height="189" src="http://bioinformaticsalgorithms.com/images/Replication/division.png" width="640"></p>
+  <p></p> 
+  <p style="text-align: left;"><b>Figure:</b> When computing <i>Pattern</i> = <i>NumberToPattern</i>(9904, 7), we divide 9904 by 4 to obtain a quotient of 2476 and a remainder of 0. This remainder represents the final nucleotide of <i>Pattern</i>, or <i>NumberToSymbol</i>(0) = <samp>A</samp>. We then iterate this process, dividing each subsequent quotient by 4, until we obtain a quotient of 0. The symbols in the nucleotide column, read upward from the bottom, yield <i>Pattern</i> = <samp>GCGGTAA</samp>.</p>
+ </body>
+</html>

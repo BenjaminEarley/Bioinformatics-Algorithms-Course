@@ -1,0 +1,19 @@
+<html>
+ <head></head>
+ <body>
+  <p>We approximated Pr(<em>N</em>, <em>A</em>, <em>Pattern</em>, <em>t</em>) as</p> 
+  <p><span class="math-tex">\[ p = \left.\binom{N - t \cdot (k-1)}{t}\middle/A^{t \cdot k}\right. \]</span></p> 
+  <p>Notice that the approximate probability that <em>Pattern</em> does <em>not</em> appear <em>t</em> or more times is therefore 1–<em>p</em>. Thus, the probability that <em>all</em> <em>A</em><sup><em>k</em></sup> patterns appear fewer than <em>t</em> times in a random string of length <em>N</em> can be approximately equal to:</p> 
+  <p><span class="math-tex">\[ (1-p)^{A^k} \]</span></p> 
+  <p>Moreover, the probability that there exists a <em>k</em>-mer appearing <em>t</em> or more times should be 1 minus this value, which gives us the following approximation:</p> 
+  <p><span class="math-tex">\[ \mathrm{Pr}(N, A, k, t) \approx 1 - (1-p)^{A^k} \]</span></p> 
+  <p>Your calculator may have difficulty with this formula, which requires raising a number close to 1 to a very large power and can cause round-off errors. To avoid this, if we assume that <em>p</em> is about the same for any <em>Pattern</em>, then we can approximate Pr(<em>N</em>, <em>A</em>, <em>k</em>, <em>t</em>) by multiplying <em>p</em> by the total number <em>A</em><sup><em>k</em></sup> of <em>k</em>-mers <em>A</em><sup><em>k</em></sup>:</p> 
+  <p><span class="math-tex">\[ \mathrm{Pr}(N,A,k,t) \approx p \cdot A^k = \left.\binom{N-t(k-1)}{t}\middle/A^{tk}\right. \cdot A^k = \left.\binom{N-t(k-1)}{t}\middle/A^{(t-1) k}\right. \]</span></p> 
+  <p>We acknowledge again that this approximation is a gross over-simplification, since the probability Pr(<em>N</em>, <em>A</em>, <em>Pattern</em>, <em>t</em>) varies across different choices of <em>k</em>-mers and because it assumes that occurrences of different <em>k</em>-mers are independent events. For example, in the main text, we wish to approximate Pr(500, 4, 9, 3), and the above formula results in the following approximation:</p> 
+  <p><span class="math-tex">\[ \mathrm{Pr}(500, 4, 9, 3) \approx \left.\binom{500 - 3 \cdot 8}{3}\middle/4^{(3-1) \cdot 9}\right. = \frac{17861900}{68719476736} \approx \frac{1}{3847} \]</span></p> 
+  <p>Because of overlapping strings, this approximation deviates from the true value of which is closer to 1/1300. To see how to obtain more precise estimates, see <a href="http://www.sciencedirect.com/science/article/pii/0097316581900054" rel="nofollow noopener noreferrer" target="_blank" undefined="">Guibas and Odlyzko, 1981</a>. </p> 
+  <p style="text-align: center;"><span style="text-align: center;"></span></p>
+  <p><a class="_stepic_link button" data-lesson="2" data-type="lesson" href="/2/2/8" rel="nofollow noopener noreferrer">Return to Main Text</a></p> 
+  <p></p>
+ </body>
+</html>

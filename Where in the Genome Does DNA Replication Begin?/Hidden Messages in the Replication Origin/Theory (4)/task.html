@@ -1,0 +1,11 @@
+<html>
+ <head></head>
+ <body>
+  <h2 style="text-align: center;">Counting Words</h2> 
+  <p>Operating under the assumption that DNA is a language of its own, let's borrow Legrand's method and see if we can find any surprisingly frequent "words" within the <em>ori</em> of <em>Vibrio cholerae</em>. We have added reason to look for frequent words in the <em>ori</em> because for various biological processes, certain nucleotide strings often appear surprisingly often in small regions of the genome. This is often because certain proteins can only bind to DNA if a specific string of nucleotides is present, and if there are more occurrences of the string, then it is more likely that binding will successfully occur. (It is also less likely that a mutation will disrupt the binding process.)</p>
+  <p>For example, <strong><samp>ACTAT</samp></strong> is a surprisingly frequent substring of&nbsp;<samp>ACA<strong>ACTAT</strong>GCAT<strong>ACTAT</strong>CGGGA<strong>ACTAT</strong>CCT</samp>.</p> 
+  <p>We will use the term <strong><em>k</em>-mer</strong> to refer to a string of length <em>k</em> and define <em>Count</em>(<em>Text</em>, <em>Pattern</em>) as the number of times that a <em>k</em>-mer <em>Pattern</em> appears as a substring of <em>Text</em>. Following the above example,<br> </p>
+  <p style="text-align: center;"><em>Count</em>(<samp>ACA<strong>ACTAT</strong>GCAT<strong>ACTAT</strong>CGGGA<strong>ACTAT</strong>CCT</samp>, <samp>ACTAT</samp>) = 3.</p> 
+  <p>We note that <em>Count</em>(<samp>CG<strong>ATATA</strong>TCC<strong>ATA</strong>G</samp>, <samp><strong>ATA</strong></samp>) is equal to 3 (not 2) since we should account for overlapping occurrences of <em>Pattern</em> in <em>Text</em>.</p>
+ </body>
+</html>

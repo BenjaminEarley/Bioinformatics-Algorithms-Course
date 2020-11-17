@@ -1,0 +1,20 @@
+<html>
+ <head></head>
+ <body>
+  <p><b><span style="color: #ff4363;">STOP and Think:</span></b>&nbsp;Take another look at the pseudocode for <b>FrequentWords</b>&nbsp;(especially if your algorithm for the Frequent Words Problem took time to run). How fast is this algorithm?<br></p> 
+  <div>
+   <pre><p><b></b></p><pre><code class="language-no-highlight">    FrequentWords(Text,&nbsp;k)
+        FrequentPatterns&nbsp;←&nbsp;an empty set
+        for&nbsp;i&nbsp;←&nbsp;0&nbsp;to&nbsp;|Text| −&nbsp;k
+            Pattern&nbsp;←&nbsp;the&nbsp;k-mer&nbsp;Text(i, k)
+            Count(i)&nbsp;←&nbsp;PatternCount(Text,&nbsp;Pattern)
+        maxCount&nbsp;←&nbsp;maximum value in array Count
+        for&nbsp;i&nbsp;←&nbsp;0&nbsp;to&nbsp;|Text| −&nbsp;k
+            if&nbsp;Count(i) =&nbsp;maxCount
+                add&nbsp;Text(i, k)&nbsp;to&nbsp;FrequentPatterns
+        remove duplicates from&nbsp;FrequentPatterns
+        return&nbsp;FrequentPatterns</code></pre><i></i></pre>
+  </div>
+  <p><i></i></p>
+ </body>
+</html>

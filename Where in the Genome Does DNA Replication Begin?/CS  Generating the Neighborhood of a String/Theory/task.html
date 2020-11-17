@@ -1,0 +1,19 @@
+<html>
+ <head></head>
+ <body>
+  <p>Our goal is to generate the <i>d</i>-neighborhood <i>Neighbors</i>(<i>Pattern</i>, <i>d</i>), the set of all <i>k</i>-mers whose Hamming distance from <i>Pattern</i> does not exceed <i>d</i>. As a warm up, we will first generate the 1-neigborhood of <i>Pattern</i> using the following pseudocode.</p> 
+  <div>
+   <pre><pre><code class="language-no-highlight">&nbsp; &nbsp;&nbsp;ImmediateNeighbors(Pattern)
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Neighborhood ← the set consisting of single string Pattern
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;for i&nbsp;= 1 to |Pattern|
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;symbol&nbsp;← i-th nucleotide of Pattern
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;for&nbsp;each nucleotide&nbsp;x different from&nbsp;symbol
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Neighbor&nbsp;← Pattern with the i-th nucleotide substituted by x
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; add&nbsp;Neighbor to&nbsp;Neighborhood
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;return&nbsp;Neighborhood</code></pre><i></i></pre>
+  </div>
+  <i></i> 
+  <p>Our idea for generating <i>Neighbors</i>(<i>Pattern</i>, <i>d</i>) is as follows. If we remove the first symbol of <i>Pattern</i> (denoted <i>FirstSymbol</i>(<i>Pattern</i>)), then we will obtain a (<i>k</i>&nbsp;− 1)-mer that we denote by <i>Suffix</i>(<i>Pattern</i>).</p> 
+  <p><b><span style="color: #ff4363;">STOP and Think:</span></b>&nbsp;If we know <i>Neighbors</i>(<i>Suffix</i>(<i>Pattern</i>), <i>d</i>), how does it help us construct <i>Neighbors</i>(<i>Pattern</i>, <i>d</i>)?<br></p> 
+ </body>
+</html>

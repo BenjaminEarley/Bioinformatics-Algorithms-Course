@@ -1,0 +1,17 @@
+<html>
+ <head></head>
+ <body>
+  <p>If you are still learning how recursive algorithms (like <b>Neighbors</b>) work, you may want to implement an iterative version of <b>Neighbors</b>&nbsp;instead, shown below.</p> 
+  <p><b> </b></p>
+  <div>
+   <pre><b></b><pre><code class="language-no-highlight"> &nbsp; &nbsp;IterativeNeighbors(Pattern,&nbsp;d)
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Neighborhood&nbsp;← set consisting of single string Pattern
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;for&nbsp;j&nbsp;=&nbsp;1 to&nbsp;d
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;for&nbsp;each string Pattern’ in Neighborhood
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; add&nbsp;ImmediateNeighbors(Pattern') to&nbsp;Neighborhood
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; remove duplicates from&nbsp;Neighborhood
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;return&nbsp;Neighborhood</code></pre><i></i></pre>
+  </div>
+  <i></i>
+ </body>
+</html>

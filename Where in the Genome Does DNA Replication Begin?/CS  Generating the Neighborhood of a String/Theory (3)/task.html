@@ -1,0 +1,29 @@
+<html>
+ <head></head>
+ <body>
+  <p><b><span style="color: #ff4363;">STOP and Think:</span></b> Consider the following questions about <b>Neighbors</b>, whose pseudocode is reproduced at the bottom.</p>
+  <ol>
+   <li>What is the running time of <b>Neighbors</b>?</li>
+   <li><b>Neighbors</b> generates&nbsp;all <i>k</i>-mers of Hamming distance at most <i>d</i>&nbsp;from <i>Pattern</i>. Modify <b>Neighbors&nbsp;</b>to generate all <i>k</i>-mers of Hamming distance exactly <i>d</i>&nbsp;from <i>Pattern</i>.</li>
+  </ol>
+  <div>
+   <div>
+    <pre><pre><code class="language-no-highlight">&nbsp; &nbsp;&nbsp;Neighbors(Pattern,&nbsp;d)
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;if&nbsp;d&nbsp;= 0
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return&nbsp;{Pattern}
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;if&nbsp;|Pattern| = 1&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;return&nbsp;{A,&nbsp;C,&nbsp;G,&nbsp;T}
+&nbsp; &nbsp; &nbsp; &nbsp; Neighborhood&nbsp;← an empty set
+&nbsp; &nbsp; &nbsp; &nbsp; SuffixNeighbors&nbsp;←&nbsp;Neighbors(Suffix(Pattern),&nbsp;d)
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;for&nbsp;each string&nbsp;Text&nbsp;from&nbsp;SuffixNeighbors
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;if&nbsp;HammingDistance(Suffix(Pattern),&nbsp;Text) &lt;&nbsp;d
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;for&nbsp;each nucleotide&nbsp;x
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; add&nbsp;x&nbsp;•&nbsp;Text&nbsp;to&nbsp;Neighborhood
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;else
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; add&nbsp;FirstSymbol(Pattern)&nbsp;•&nbsp;Text&nbsp;to&nbsp;Neighborhood
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;return&nbsp;Neighborhood</code></pre><i></i></pre>
+   </div>
+   <i></i>
+  </div>
+ </body>
+</html>

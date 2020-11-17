@@ -1,0 +1,21 @@
+<html>
+ <head></head>
+ <body>
+  <p>We now have a faster algorithm for the Frequent Words Problem. After generating the frequency array, we can find all most frequent <i>k</i>-mers by simply finding all k-mers corresponding to the maximum element(s) in the frequency array.</p> 
+  <p><b></b></p>
+  <div>
+   <pre><b></b><pre><code class="language-no-highlight">&nbsp; &nbsp;FasterFrequentWords(Text, k)
+&nbsp; &nbsp; &nbsp; &nbsp; FrequentPatterns ← an empty set
+&nbsp; &nbsp; &nbsp; &nbsp; FrequencyArray ← ComputingFrequencies(Text, k)
+&nbsp; &nbsp; &nbsp; &nbsp; maxCount ← maximal value in FrequencyArray
+&nbsp; &nbsp; &nbsp; &nbsp; for i ← 0 to 4k − 1
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if FrequencyArray(i) = maxCount
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Pattern ←&nbsp;NumberToPattern(i, k)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; add Pattern to the set FrequentPatterns
+&nbsp; &nbsp; &nbsp; &nbsp; return FrequentPatterns</code></pre><i></i></pre>
+  </div>
+  <i></i>
+  <p>Although <b>FasterFrequentWords</b> is fast for small <i>k</i> (i.e., you can use it to find <i>DnaA</i> boxes in an <i>ori </i>region), it becomes impractical when <i>k</i> is large. If you are familiar with sorting algorithms and are interested in seeing a faster algorithm, see <a href="http://stepic.org/lesson/CS-Finding-Frequent-Words-by-Sorting-3011/step/1" rel="nofollow noopener noreferrer"><b>Charging Station: </b>Finding Frequent Words by Sorting</a>.</p> 
+  <p><span style="color: #a03881;"><b>Exercise Break:</b></span> Our claim that <b>FasterFrequentWords</b> is faster than <b>FrequentWords</b> is only correct for certain values of |<i>Text</i>| and <i>k</i>. Estimate the running time of <b>FasterFrequentWords</b> and characterize the values of |<i>Text</i>| and <i>k</i> when <b>FasterFrequentWords</b> is indeed faster than <b>FrequentWords</b>.</p> 
+ </body>
+</html>
